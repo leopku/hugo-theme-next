@@ -1,0 +1,20 @@
+{{ partial "header.html" . }}
+<div class="uk-block uk-block-default">
+	<div class="uk-container uk-container-center">
+		<div class="uk-grid">
+			<div class="uk-width-1-10"></div>
+			<div class="uk-width-8-10">
+				<article class="uk-article">
+					<h1 class="uk-article-title" style="font-size: 23px;">
+						{{ .Title }}
+					</h1>
+					{{ $baseurl := .Site.BaseUrl }}
+					<p class="uk-article-meta">Posted on {{ .Date.Format .Site.Params.DateForm }} | {{ range .Params.tags }} <a href="{{ $baseurl }}/tags/{{ . | urlize}}" class="uk-button uk-button-mini">#{{ . }}</a>{{ end }}</p>
+					{{ .Content }}
+				</article>
+			</div>
+			<div class="uk-width-1-10"></div>
+		</div>
+	</div>
+</div>
+{{ partial "footer.html" . }}

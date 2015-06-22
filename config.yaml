@@ -1,0 +1,22 @@
+BaseUrl: "http://www.himysql.com"
+LanguageCode: "zh-CN"
+Title: "HiMySQL"
+
+Params:
+  Author: "leopku"
+  Birth: "CTO不加V"
+  DateForm: "Mon, Jan 2, 2006"
+  GoogleAnalyticsUserID: "UA-6386885-3"
+  GravatarHash: "leopku"
+  Facebook: "leopku"
+  Twitter: "leopku"
+  Github: "leopku"
+  Disqus: "himysqlcn"
+  ShowRelatedPost: True
+  ShowTagCloud: False
+  SyntaxHighlightTheme: "github.min.css"
+
+Indexes:
+  tag: "tags"
+
+MetadataFormat: "yaml"
