@@ -5,7 +5,7 @@
 	</h2>
 	{{ $baseurl := .Site.BaseUrl }}
 	<p class="uk-article-meta">
-		Post on {{ .Date.Format .Site.Params.DateForm }} | {{ range .Params.tags }} <a class="uk-button uk-button-mini" href="{{ $baseurl }}/tags/{{ . | urlize}}">#{{ . }}</a> {{ end }}
+		Post on {{ .Date.Format .Site.Params.DateFormat }} | {{ range .Params.tags }} <a class="uk-button uk-button-mini" href="{{ $baseurl }}/tags/{{ . | urlize}}">#{{ . }}</a> {{ end }}
 	</p>
 	<p style="font-size: 16px;">{{ substr .Summary 0 280 }}</p>
 	<p><span class="uk-align-right"><a href="{{ .Permalink }}">more...</a></span></p>

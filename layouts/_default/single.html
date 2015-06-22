@@ -9,12 +9,24 @@
 						{{ .Title }}
 					</h1>
 					{{ $baseurl := .Site.BaseUrl }}
-					<p class="uk-article-meta">Posted on {{ .Date.Format .Site.Params.DateForm }} | {{ range .Params.tags }} <a href="{{ $baseurl }}/tags/{{ . | urlize}}" class="uk-button uk-button-mini">#{{ . }}</a>{{ end }}</p>
+					<p class="uk-article-meta">Posted on {{ .Date.Format .Site.Params.DateFormat }} | {{ range .Params.tags }} <a href="{{ $baseurl }}/tags/{{ . | urlize}}" class="uk-button uk-button-mini">#{{ . }}</a>{{ end }}</p>
 					{{ .Content }}
 				</article>
 			</div>
 			<div class="uk-width-1-10"></div>
 		</div>
+    <div class="uk-grid">
+      <div class="uk-width-1-10"></div>
+      <div class="uk-width-8-10">
+        <!-- <div class="uk-panel uk-panel-box uk-panel-box-primary">
+          This article is authorized by {{ .Site.Params.Author }} and is licensed under a <a href="https://creativecommons.org/licenses/by/3.0/deed">Creative Commons Attribution 3.0 Unported License.</a>
+        </div> -->
+        <div class="uk-pane uk-panel-box uk-panel-box-primary">
+          Unless otherwise indicated, the text of documents in this site is available under the <a href="https://creativecommons.org/licenses/by/3.0/deed">Creative Commons Attribution 3.0 Unported License</a>, or any later version. Copyright 2009-2016 {{ .Site.Params.Author }}.
+        </div>
+      </div>
+      <div class="uk-width-1-10"></div>
+    </div>
 	</div>
 </div>
 {{ partial "footer.html" . }}

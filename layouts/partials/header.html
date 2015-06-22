@@ -26,7 +26,31 @@
 			<div class="uk-grid">
 				<div class="uk-width-1-10"></div>
 				<div class="uk-width-8-10">
-					<a href="/">NeXT</a> 
+          <!-- <p>
+            <span><h2 id="logo"><a href="/">{{ .Site.Title }}</a></h2></span>
+            <span>
+              <a href="/">首页</a>
+              {{ range .Site.Pages }}
+                {{ if eq .Type "page" }}
+                  <a href="{{ .Permalink }}">{{ .Title }}</a>
+                {{ end }}
+              {{ end }}
+            </span>
+          </p> -->
+          <div id="header" class="clearfix">
+            <div class="uk-float-left">
+              <h2><a href="/">{{ .Site.Title }}</a></h2>
+            </div>
+            <div class="uk-float-right">
+              <a href="/">首页</a>
+              <a href="/tags/">标签</a>
+              <!-- {{ range .Site.Pages }}
+                {{ if eq .Type "page" }}
+                  <a href="{{ .Permalink }}">{{ .Title }}</a>
+                {{ end }}
+              {{ end }} -->
+            </div>
+          </div>
 				</div>
 				<div class="uk-width-1-10"></div>
 			</div>
