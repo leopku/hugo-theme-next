@@ -8,8 +8,11 @@
 					<h1 class="uk-article-title" style="font-size: 23px;">
 						{{ .Title }}
 					</h1>
-					{{ $baseurl := .Site.BaseUrl }}
+					{{ $baseurl := .Site.BaseURL }}
 					<p class="uk-article-meta">Posted on {{ .Date.Format .Site.Params.DateFormat }} | {{ range .Params.tags }} <a href="{{ $baseurl }}/tags/{{ . | urlize}}" class="uk-button uk-button-mini">#{{ . }}</a>{{ end }}</p>
+        <div class="uk-panel uk-panel-box uk-panel-box-primary">
+          Unless otherwise indicated, the text of documents in this site is available under the <a href="https://creativecommons.org/licenses/by/3.0/deed">Creative Commons Attribution 3.0 Unported License</a>, or any later version. Copyright 2009-2016 {{ .Site.Params.Author }}.
+        </div>
 					{{ .Content }}
 				</article>
 			</div>
@@ -21,8 +24,19 @@
         <!-- <div class="uk-panel uk-panel-box uk-panel-box-primary">
           This article is authorized by {{ .Site.Params.Author }} and is licensed under a <a href="https://creativecommons.org/licenses/by/3.0/deed">Creative Commons Attribution 3.0 Unported License.</a>
         </div> -->
-        <div class="uk-pane uk-panel-box uk-panel-box-primary">
-          Unless otherwise indicated, the text of documents in this site is available under the <a href="https://creativecommons.org/licenses/by/3.0/deed">Creative Commons Attribution 3.0 Unported License</a>, or any later version. Copyright 2009-2016 {{ .Site.Params.Author }}.
+        <div class="uk-panel uk-panel-box uk-panel-box-secondary">
+          <h3 class="uk-panel-title">Related Posts</h3>
+          {{ $page_link := .Permalink }}
+          {{ $tags := .Params.tags }}
+          <ul class="uk-list uk-list-striped">
+            {{ range .Site.Recent }}
+              {{ $page := . }}
+              {{ $has_common_tags := intersect $tags .Params.tags | len | lt 0 }}
+              {{ if and $has_common_tags (ne $page_link $page.Permalink) }}
+                <li><a href="{{ $page.Permalink }}">{{ $page.Title }}</a></li>
+              {{ end }}
+            {{ end }}
+          </ul>
         </div>
       </div>
       <div class="uk-width-1-10"></div>
