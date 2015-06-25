@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>
-	  {{ if eq .Url "/" }}
+	  {{ if eq .URL "/" }}
 	  {{ .Site.Title }}
-	  {{ else if in .Url "/post/" }}
+	  {{ else if in .URL "/post/" }}
 	  All Entries | {{ .Site.Title}}
-	  {{ else if in .Url "/tags/" }}
+	  {{ else if in .URL "/tags/" }}
 	  Tags | {{ .Site.Title }}
 	  {{ else }}
 	  {{ .Title }} | {{ .Site.Title }}
