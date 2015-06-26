@@ -1,20 +1,39 @@
 {{ partial "header.html" . }}
 {{ $pagination := 10 }}
-
+{{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
 	<div class="uk-block uk-block-default">
 		<div class="uk-container uk-container-center">
 			<div class="uk-grid">
 				<div class="uk-width-1-10"></div>
 				<div class="uk-width-8-10">
-					{{ range first $pagination .Data.Pages }}
-						{{ if eq .Type "post" }}
+					{{ range $paginator.Pages }}
 							{{ .Render "list" }}
-						{{ end }}
 					{{ end }}
-					
+          <ul class="uk-pagination">
+            {{ if $paginator.HasPrev }}
+              <li class="uk-pagination-previous">
+                <a href="/page/{{ sub $paginator.PageNumber 1 }}">&lt; Prev</a>
+              </li>
+            {{ else}}
+              <li class="uk-pagination-previous uk-disabled">
+                <span>&lt; Prev</span>
+              </li>
+            {{ end }}
+
+            {{ if $paginator.HasNext }}
+              <li class="uk-pagination-next">
+                <a href="/page/{{ add $paginator.PageNumber 1 }}">&gt; Next</a>
+              </li>
+            {{ else}}
+              <li class="uk-pagination-next uk-disabled">
+                <span>Next &gt;</span>
+              </li>
+            {{ end }}
+          </ul>
+
 				</div>
 				<div class="uk-width-1-10"></div>
-			</div>			
+			</div>
 		</div>
 	</div>
 
