@@ -19,10 +19,12 @@
 	</div>
 
 	<script src="//getuikit.com/vendor/jquery.js"></script>
+  <script src="/js/noframework.waypoints.min.js"></script>
 	<script src="//getuikit.com/dist/js/uikit.js"></script>
 	<script src="//getuikit.com/vendor/highlight/highlight.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
 
+{{ if isset .Site.Params "GoogleAnalyticsUserID" }}
 <!-- Google Analytics -->
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -32,9 +34,12 @@
 ga('create', '{{ .Site.Params.GoogleAnalyticsUserID }}', 'auto');
 ga('send', 'pageview');
 </script>
+{{ end }}
+
+
 
 <!-- Gravatar -->
-<script>
+<!-- <script>
 $(function() {
     var url = "https://cn.gravatar.com/{{ .Site.Params.GravatarHash }}.json";
     $.getJSON(url)
@@ -50,7 +55,7 @@ $(function() {
             console.log(data);
         });
 });
-</script>
+</script> -->
 
 </body>
 </html>
