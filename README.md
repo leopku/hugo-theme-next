@@ -3,6 +3,8 @@
 NeXT is a theme for [Hugo](http://gohugo.io/).
 This theme was inspired by a Hexo theme - [NexT](https://github.com/iissnan/hexo-theme-next).
 
+![](https://img.shields.io/badge/hugo-0.14%2B-brightgreen.svg?style=flat-square)
+
 # Preview
 
 ## newest demo
@@ -11,12 +13,14 @@ This theme was inspired by a Hexo theme - [NexT](https://github.com/iissnan/hexo
 
 ## screenshot
 
+![](https://raw.githubusercontent.com/leopku/hugo-theme-next/master/static/images/screenshot.png)
 
+![](https://raw.githubusercontent.com/leopku/hugo-theme-next/master/static/images/tn.png)
 
-![](https://img.shields.io/badge/hugo-0.14%2B-brightgreen.svg?style=flat-square)
 
 # Features
-- 
+- linking static files from cdn.jsdelivr.com
+- lazy load Disqus
 
 # Install
 
