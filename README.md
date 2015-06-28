@@ -1,15 +1,15 @@
 # NeXT
 
-NeXT is a theme for [Hugo](http://gohugo.io/).
-This theme was inspired by a Hexo theme - [NexT](https://github.com/iissnan/hexo-theme-next).
+NeXT is a fast and clean theme for [Hugo](http://gohugo.io/).
+ which was inspired by a Hexo theme named [NexT](https://github.com/iissnan/hexo-theme-next).
 
 ![](https://img.shields.io/badge/hugo-0.14%2B-brightgreen.svg?style=flat-square)
 
 # Preview
 
-## newest demo
+## Live demo
 
-[visit newest online demo](http://www.himysql.com)
+[visit live demo](http://www.himysql.com)
 
 ## screenshot
 
@@ -17,7 +17,25 @@ This theme was inspired by a Hexo theme - [NexT](https://github.com/iissnan/hexo
 
 # Features
 - linking static files from cdn.jsdelivr.com
+- Google Analytics supported
+- customable pagination
 - lazy load Disqus
+- related posts
+- syntax highlighting
+- customable creating time of site which should display in footer each page and license declaring of each post
+- license  delaring in head of each post.
+
+# TODO
+
+- diplaying social accounts
+  - Facebook
+  - Twitter
+  - Github
+  - Gravatar
+  - Weibo (for Chinese)
+- Duoshuo comments (for Chinese)
+- Load static files from Chinese CDN
+- Optimizing UI and adding animation
 
 # Install
 
@@ -42,3 +60,4 @@ All works of NeXT was based on following projects, many thanks all the authors o
 * [uikit](http://getuikit.com/)
 * [Waypoints](http://imakewebthings.com/waypoints/)
 * [Disqus](http://disqus.com)
+* [Highlight.js](https://highlightjs.org/)

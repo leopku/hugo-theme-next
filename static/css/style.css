@@ -2,16 +2,21 @@ html, body {
 	font-family: Cambria, Georgia, 'Microsoft Jhenghei', 'Hiragino Sans GB', 'Microsoft YaHei', 'Times New Roman', serif;
 }
 
-#header a {
+/*a {
+  color: #ccc;
+  border-bottom-style: dotted;
+}
+*/
+#header .uk-float-left a {
   color: rgb(85, 85, 85);
-  border-bottom: none;
+  border-bottom-style: none;
 }
 
-#header a:hover {
-  border-bottom: none;
+#header .uk-float-left a:hover {
+  border-bottom-style: none;
 }
 
-.uk-article-title,.uk-article-lead {
+.uk-article-title, .uk-article-lead {
 	color: rgb(85, 85, 85);
 }
 
@@ -28,7 +33,7 @@ html, body {
 	/*line-height: 1.8;*/
 }
 
-p > code {
+:not(pre) > code {
   padding: 1px 3px 1px 3px;
 	background-color: #f5f5f5;
 }

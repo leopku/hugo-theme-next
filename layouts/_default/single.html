@@ -11,7 +11,7 @@
 					{{ $baseurl := .Site.BaseURL }}
 					<p class="uk-article-meta">Posted on {{ .Date.Format .Site.Params.DateFormat }} | {{ range .Params.tags }} <a href="{{ $baseurl }}/tags/{{ . | urlize}}" class="uk-button uk-button-mini">#{{ . }}</a>{{ end }}</p>
         <div class="uk-panel uk-panel-box uk-panel-box-primary">
-          Unless otherwise indicated, the text of documents in this site is available under the <a href="https://creativecommons.org/licenses/by/3.0/deed">Creative Commons Attribution 3.0 Unported License</a>, or any later version. Copyright 2009-2016 {{ .Site.Params.Author }}.
+          Unless otherwise indicated, the text of documents in this site is available under the <a href="https://creativecommons.org/licenses/by/3.0/deed">Creative Commons Attribution 3.0 Unported License</a>, or any later version. Copyright {{ substr .Site.Params.DateFrom 0 4 }}-2016 {{ .Site.Params.Author }}.
         </div>
 					{{ .Content }}
 				</article>
