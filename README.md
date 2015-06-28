@@ -13,10 +13,7 @@ This theme was inspired by a Hexo theme - [NexT](https://github.com/iissnan/hexo
 
 ## screenshot
 
-![](https://raw.githubusercontent.com/leopku/hugo-theme-next/master/static/images/screenshot.png)
-
 ![](https://raw.githubusercontent.com/leopku/hugo-theme-next/master/static/images/tn.png)
-
 
 # Features
 - linking static files from cdn.jsdelivr.com
