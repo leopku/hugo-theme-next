@@ -5,7 +5,7 @@ This theme was inspired by a Hexo theme - [NexT](https://github.com/iissnan/hexo
 
 [online preview](http://www.himysql.com)
 
-![](https://img.shields.io/badge/hexo-0.14%2B-brightgreen.svg?style=flat-square)
+![](https://img.shields.io/badge/hugo-0.14%2B-brightgreen.svg?style=flat-square)
 
 # Install
 
