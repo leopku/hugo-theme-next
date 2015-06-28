@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 {{ $pagination := 10 }}
-{{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+{{ $paginator := .Paginate (where .Data.Pages "Type" "post") .Site.Params.perPage }}
 	<div class="uk-block uk-block-default">
 		<div class="uk-container uk-container-center">
 			<div class="uk-grid">

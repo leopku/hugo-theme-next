@@ -1,9 +1,10 @@
 name = "NeXT"
 license = "MIT"
 licenselink = "https://github.com/leopku/hugo-theme-next/blob/master/LICENSE"
-description = "A very simple theme for hugo which inspired by a hexo theme NexT"
+description = "A very simple and fast theme for hugo,  which inspired by a hexo theme NexT"
 homepage = "https://github.com/leopku/hugo-theme-next"
-features = ["blog", ]
+features = ["blog", "google analytics", "disqus"]
+min_version = 0.14
 
 [author]
   name = "leopku"

@@ -1,0 +1,23 @@
+BaseUrl = ""
+LanguageCode = ""
+Title = ""
+
+[Params]
+  Author = ""
+  Birth = ""
+  DateForm = "Mon, Jan 2, 2006"
+  GoogleAnalyticsUserID = ""
+  GravatarHash = ""
+  Facebook = ""
+  Twitter = ""
+  Github = ""
+  Disqus = ""
+  perPage = 10
+  ShowRelatedPost = true
+  ShowTagCloud = false
+  SyntaxHighlightTheme = "github.min.css"
+
+[Indexes]
+  tag = "tags"
+
+# MetadataFormat = "yaml"
