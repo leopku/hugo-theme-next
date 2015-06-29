@@ -16,6 +16,7 @@ Title = ""
   ShowRelatedPost = true
   ShowTagCloud = false
   SyntaxHighlightTheme = "github.min.css"
+  infiniteScroll = true # if true, pagination will disabled.
 
 [Indexes]
   tag = "tags"

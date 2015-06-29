@@ -8,6 +8,8 @@
 					{{ range $paginator.Pages }}
 							{{ .Render "list" }}
 					{{ end }}
+
+          {{ if not .Site.Params.infiniteScroll }}
           <ul class="uk-pagination">
             {{ if $paginator.HasPrev }}
               <li class="uk-pagination-previous">
@@ -29,6 +31,7 @@
               </li>
             {{ end }}
           </ul>
+          {{ end }}
 
 				</div>
 				<div class="uk-width-1-10"></div>
@@ -38,17 +41,16 @@
 
 {{ partial "footer.html" . }}
 
-<!-- <script>
+<script>
 (function () {
   var loadPage = {{ $paginator.PageNumber }};
+  var totalPages = {{ $paginator.TotalPages }};
   $('#footer[data-uk-scrollspy]').on('inview.uk.scrollspy', function () {
     loadPage = loadPage + 1;
+    if (loadPage > totalPages) { return; }
     $.get('/page/' + loadPage, function (result) {
-      console.log('[current loading page]' + loadPage);
-      // console.log(result)
-      // console.log($(result).find('article'));
-      $('#articleContainer').append($(result).find('article'));
+      $('#articleContainer').append('<hr class="uk-grid-divider">').append($(result).find('article'));
     })
   })
 })();
-</script> -->
+</script>
