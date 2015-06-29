@@ -68,14 +68,24 @@
     disqus_url = '{{ .Permalink }}';
   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 
-  var waypoint = new Waypoint({
-    element: document.getElementById('disqus_thread'),
+  // var waypoint = new Waypoint({
+  //   element: document.getElementById('disqus_thread'),
+  //   offset: 'bottom-in-view',
+  //   handler: function () {
+  //     if (!ds_loaded) {
+  //       ds_loaded = true;
+  //       document.getElementById('disqus_thread').appendChild(dsq);
+  //     };
+  //   }
+  // });
+
+  $('#disqus_thread').waypoint({
     offset: 'bottom-in-view',
-    handler: function () {
-      if (!ds_loaded) {
+    handler: function(){
+      if (!ds_loaded){
         ds_loaded = true;
-        document.getElementById('disqus_thread').appendChild(dsq);
-      };
+        $('#disqus_thread').appendChild(dsq);
+      }
     }
   });
 })();
