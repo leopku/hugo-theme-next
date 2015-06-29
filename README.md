@@ -13,7 +13,7 @@ NeXT is a fast and clean theme for [Hugo](http://gohugo.io/).
 
 ## screenshot
 
-![](https://raw.githubusercontent.com/leopku/hugo-theme-next/master/static/images/tn.png)
+![](https://raw.githubusercontent.com/leopku/hugo-theme-next/master/images/tn.png)
 
 # Features
 - linking static files from cdn.jsdelivr.com
