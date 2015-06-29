@@ -44,7 +44,7 @@
     <div class="uk-grid">
       <div class="uk-width-1-10"></div>
       <div class="uk-width-8-10">
-        <div id="disqus_thread"></div>
+        <div id="disqus_thread" data-uk-scrollspy></div>
       </div>
       <div class="uk-width-1-10"></div>
     </div>
@@ -68,15 +68,12 @@
     disqus_url = '{{ .Permalink }}';
   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 
-  $('#disqus_thread').waypoint({
-    offset: 'bottom-in-view',
-    handler: function(){
-      if (!ds_loaded){
-        ds_loaded = true;
-        document.getElementById('disqus_thread').appendChild(dsq);
-      }
+  $('[data-uk-scrollspy]').on('init.uk.scrollspy', function () {
+    if (!ds_loaded){
+      ds_loaded = true;
+      document.getElementById('disqus_thread').appendChild(dsq);
     }
-  });
+  })
 
 })();
 </script>

@@ -1,11 +1,10 @@
 {{ partial "header.html" . }}
-{{ $pagination := 10 }}
 {{ $paginator := .Paginate (where .Data.Pages "Type" "post") .Site.Params.perPage }}
 	<div class="uk-block uk-block-default">
 		<div class="uk-container uk-container-center">
 			<div class="uk-grid">
 				<div class="uk-width-1-10"></div>
-				<div class="uk-width-8-10">
+				<div id="articleContainer" class="uk-width-8-10">
 					{{ range $paginator.Pages }}
 							{{ .Render "list" }}
 					{{ end }}
@@ -38,3 +37,18 @@
 	</div>
 
 {{ partial "footer.html" . }}
+
+<!-- <script>
+(function () {
+  var loadPage = {{ $paginator.PageNumber }};
+  $('#footer[data-uk-scrollspy]').on('inview.uk.scrollspy', function () {
+    loadPage = loadPage + 1;
+    $.get('/page/' + loadPage, function (result) {
+      console.log('[current loading page]' + loadPage);
+      // console.log(result)
+      // console.log($(result).find('article'));
+      $('#articleContainer').append($(result).find('article'));
+    })
+  })
+})();
+</script> -->
