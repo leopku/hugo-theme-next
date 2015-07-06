@@ -19,17 +19,17 @@ NeXT is a fast and clean theme for [Hugo](http://gohugo.io/).
 - linking static files from cdn.jsdelivr.com
 - Google Analytics supported
 - Infinite loading articles when scroll to buttom of article listing page.(default)
-- customizable number of articles per-page.
+- Customizable number of articles per-page.
 - Traditional pagination as `Prev`/`Next` also supported when infinite loading disabled.
-- lazy load Disqus
-- related posts
-- syntax highlighting
-- customable creating time of site which should display in footer of each page and license declaring of each post
-- license delaring in head of each post.
+- Lazy loading Disqus
+- Related posts
+- Syntax highlighting
+- Customable creating time of site which should display in footer of each page and license declaring of each post
+- License delaring in head of each post.
 
 # TODO
 
-- diplaying social accounts
+- Diplaying social accounts
   - Facebook
   - Twitter
   - Github
