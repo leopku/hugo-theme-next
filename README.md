@@ -16,7 +16,7 @@ NeXT is a fast and clean theme for [Hugo](http://gohugo.io/).
 ![](https://raw.githubusercontent.com/leopku/hugo-theme-next/master/images/tn.png)
 
 # Features
-- linking static files from cdn.jsdelivr.com
+- Linking static files from cdn.jsdelivr.com
 - Google Analytics supported
 - Infinite loading articles when scroll to buttom of article listing page.(default)
 - Customizable number of articles per-page.
@@ -29,15 +29,13 @@ NeXT is a fast and clean theme for [Hugo](http://gohugo.io/).
 
 # TODO
 
-- Diplaying social accounts
+- [ ] Diplaying social accounts
   - Facebook
   - Twitter
   - Github
   - Gravatar
   - Weibo (for Chinese)
-- Duoshuo comments (for Chinese)
-- Load static files from Chinese CDN
-- Optimizing UI and adding animation
+- [ ] Optimizing UI and adding animation
 
 # Install
 
