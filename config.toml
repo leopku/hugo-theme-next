@@ -5,7 +5,7 @@ Title = ""
 [Params]
   Author = ""
   Birth = ""
-  DateForm = "Mon, Jan 2, 2006"
+  DateFormat = "Mon, Jan 2, 2006"
   GoogleAnalyticsUserID = ""
   GravatarHash = ""
   Facebook = ""
