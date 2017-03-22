@@ -30,8 +30,12 @@
       <div class="uk-width-large-1-10"></div>
       <div class="uk-width-large-8-10">
         <ul class="uk-pagination">
-            <li class="uk-float-left"><a href="#">&lt; Previous</a></li>
-            <li class="uk-float-right"><a href="#">Next &gt;</a></li>
+          {{ if .Prev }}
+            <li class="uk-float-left"><a href="{{ .Prev.Permalink }}">&lt; Previous</a></li>
+          {{ end }}
+          {{ if .Next }}
+            <li class="uk-float-right"><a href="{{ .Next.Permalink }}">Next &gt;</a></li>
+          {{ end }}
         </ul>
       </div>
       <div class="uk-width-large-1-10"></div>
