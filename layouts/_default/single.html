@@ -10,20 +10,35 @@
 					</h1>
 					{{ $baseurl := .Site.BaseURL }}
 					<p class="uk-article-meta">Posted on {{ .Date.Format .Site.Params.DateFormat }} | {{ range .Params.tags }} <a href="{{ $baseurl }}/tags/{{ . | urlize}}" class="uk-button uk-button-mini">#{{ . }}</a>{{ end }}</p>
-        <div class="uk-panel uk-panel-box uk-panel-box-primary">
-          Unless otherwise indicated, the text of documents in this site is available under the <a href="https://creativecommons.org/licenses/by/3.0/deed">Creative Commons Attribution 3.0 Unported License</a>, or any later version. Copyright {{ substr .Site.Params.DateFrom 0 4 }}-2016 {{ .Site.Params.Author }}.
-        </div>
+
+          {{ if .Site.Params.LicenseBeforeContent }}
+            <div class="uk-panel uk-panel-box uk-panel-box-primary">
+              Unless otherwise indicated, the text of documents in this site is available under the <a href="https://creativecommons.org/licenses/by/3.0/deed">Creative Commons Attribution 3.0 Unported License</a>, or any later version. Copyright {{ substr .Site.Params.DateFrom 0 4 }} - {{ .Now.Year }} {{ .Site.Params.Author }}.
+            </div>
+          {{ end }}
 					{{ .Content }}
+          {{ if .Site.Params.LicenseAfterContent }}
+            <div class="uk-panel uk-panel-box uk-panel-box-primary">
+              Unless otherwise indicated, the text of documents in this site is available under the <a href="https://creativecommons.org/licenses/by/3.0/deed">Creative Commons Attribution 3.0 Unported License</a>, or any later version. Copyright {{ substr .Site.Params.DateFrom 0 4 }} - {{ .Now.Year }} {{ .Site.Params.Author }}.
+            </div>
+          {{ end }}
 				</article>
 			</div>
 			<div class="uk-width-large-1-10 uk-hidden-medium uk-hidden-small"></div>
 		</div>
     <div class="uk-grid">
-      <div class="uk-width-1-10"></div>
-      <div class="uk-width-8-10">
-        <!-- <div class="uk-panel uk-panel-box uk-panel-box-primary">
-          This article is authorized by {{ .Site.Params.Author }} and is licensed under a <a href="https://creativecommons.org/licenses/by/3.0/deed">Creative Commons Attribution 3.0 Unported License.</a>
-        </div> -->
+      <div class="uk-width-large-1-10"></div>
+      <div class="uk-width-large-8-10">
+        <ul class="uk-pagination">
+            <li class="uk-float-left"><a href="#">&lt; Previous</a></li>
+            <li class="uk-float-right"><a href="#">Next &gt;</a></li>
+        </ul>
+      </div>
+      <div class="uk-width-large-1-10"></div>
+    </div>
+    <div class="uk-grid">
+      <div class="uk-width-large-1-10"></div>
+      <div class="uk-width-large-8-10">
         <div class="uk-panel uk-panel-box uk-panel-box-secondary">
           <h3 class="uk-panel-title">Related Posts</h3>
           {{ $page_link := .Permalink }}
@@ -39,14 +54,14 @@
           </ul>
         </div>
       </div>
-      <div class="uk-width-1-10"></div>
+      <div class="uk-width-large-1-10"></div>
     </div>
     <div class="uk-grid">
-      <div class="uk-width-1-10"></div>
-      <div class="uk-width-8-10">
+      <div class="uk-width-large-1-10"></div>
+      <div class="uk-width-large-8-10">
         <div id="disqus_thread" data-uk-scrollspy></div>
       </div>
-      <div class="uk-width-1-10"></div>
+      <div class="uk-width-large-1-10"></div>
     </div>
 	</div>
 </div>
