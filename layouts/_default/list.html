@@ -3,10 +3,13 @@
 	<h2 class="uk-article-title">
 		<a href="{{ .Permalink }}">{{ .Title }}</a>
 	</h2>
+  {{ .Summary }}
 	{{ $baseurl := .Site.BaseURL }}
+  {{ if .Truncated }}
+	<p><!-- <span class="uk-align-right"> --><a class="uk-button uk-button-small uk-button-primary" href="{{ .Permalink }}">more...</a><!-- </span> --></p>
+  {{ end }}
 	<p class="uk-article-meta">
 		Post on {{ .Date.Format .Site.Params.DateFormat }} | {{ range .Params.tags }} <a class="uk-button uk-button-mini" href="{{ $baseurl }}/tags/{{ . | urlize}}">#{{ . }}</a> {{ end }}
 	</p>
-	<p><!-- <span class="uk-align-right"> --><a class="uk-button uk-button-small uk-button-primary" href="{{ .Permalink }}">more...</a><!-- </span> --></p>
 	</div>
 </article>

@@ -16,7 +16,7 @@
   </title>
   <link rel="stylesheet" href="//cdn.jsdelivr.net/uikit/2.21.0/css/uikit.min.css">
   <!-- <link rel="stylesheet" href="//cdn.staticfile.org/highlight.js/8.3/styles/{{ .Site.Params.SyntaxHighlightTheme }}"> -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/8.6/styles/{{ .Site.Params.SyntaxHighlightTheme }}">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.10.0/styles/{{ .Site.Params.SyntaxHighlightTheme }}">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -44,11 +44,11 @@
             <div class="uk-float-right">
               <a href="/" class="uk-button">Home</a>
               <!-- <a href="/tags/">标签</a> -->
-              {{ range .Site.Pages }}
+              <!-- {{ range .Site.Pages }}
                 {{ if eq .Type "page" }}
                   <a href="{{ .Permalink }}" class="uk-button">{{ .Title }}</a>
                 {{ end }}
-              {{ end }}
+              {{ end }} -->
             </div>
           </div>
 				</div>
