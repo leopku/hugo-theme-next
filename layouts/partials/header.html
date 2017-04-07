@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+  <link rel="dns-prefetch" href="//www.google-analytics.com" />
+  {{ if .Site.DisqusShortname }}
+  <link rel="dns-prefetch" href="//{{ .Site.DisqusShortname }}.disqus.com" />
+  {{ end }}
+  <link rel="canonical" href="{{ .URL }}" />
+  {{ if eq .URL "/" }}
+  <meta name="description" content="{{ .Site.Title }}">
+  {{ else if in .URL "/post/" }}
+  <meta name="description" content="{{ .Title }}">
+  {{ end }}
   <title>
 	  {{ if eq .URL "/" }}
-	  {{ .Site.Title }}
+	    {{ .Site.Title }}
 	  {{ else if in .URL "/post/" }}
-	  All Entries | {{ .Site.Title}}
+	    {{ .Title }} | {{ .Site.Title}}
 	  {{ else if in .URL "/tags/" }}
-	  Tags | {{ .Site.Title }}
+	    Tags | {{ .Site.Title }}
 	  {{ else }}
-	  {{ .Title }} | {{ .Site.Title }}
+	    {{ .Title }} | {{ .Site.Title }}
 	  {{ end }}
   </title>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/uikit/2.27.2/css/uikit.min.css">
-  <!-- <link rel="stylesheet" href="//cdn.staticfile.org/highlight.js/8.3/styles/{{ .Site.Params.SyntaxHighlightTheme }}"> -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.10.0/styles/{{ .Site.Params.SyntaxHighlightTheme }}">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/uikit/2.27.2/css/uikit.min.css" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.10.0/styles/{{ .Site.Params.SyntaxHighlightTheme }}" />
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 
 <body>
@@ -26,29 +36,12 @@
 			<div class="uk-grid">
 				<div class="uk-width-large-1-10 uk-hidden-medium uk-hidden-small"></div>
 				<div class="uk-width-large-8-10 uk-width-medium-1-1 uk-width-small-1-1">
-          <!-- <p>
-            <span><h2 id="logo"><a href="/">{{ .Site.Title }}</a></h2></span>
-            <span>
-              <a href="/">首页</a>
-              {{ range .Site.Pages }}
-                {{ if eq .Type "page" }}
-                  <a href="{{ .Permalink }}">{{ .Title }}</a>
-                {{ end }}
-              {{ end }}
-            </span>
-          </p> -->
           <div id="header" class="clearfix">
             <div class="uk-float-left">
               <h2><a href="/">{{ .Site.Title }}</a></h2>
             </div>
             <div class="uk-float-right">
               <a href="/" class="uk-button">Home</a>
-              <!-- <a href="/tags/">标签</a> -->
-              <!-- {{ range .Site.Pages }}
-                {{ if eq .Type "page" }}
-                  <a href="{{ .Permalink }}" class="uk-button">{{ .Title }}</a>
-                {{ end }}
-              {{ end }} -->
             </div>
           </div>
 				</div>
