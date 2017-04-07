@@ -18,13 +18,23 @@
 	  {{ if eq .URL "/" }}
 	    {{ .Site.Title }}
 	  {{ else if in .URL "/post/" }}
-	    {{ .Title }} | {{ .Site.Title}}
+	    {{ .Title }} | {{ .Site.Title }}
 	  {{ else if in .URL "/tags/" }}
 	    Tags | {{ .Site.Title }}
 	  {{ else }}
 	    {{ .Title }} | {{ .Site.Title }}
 	  {{ end }}
   </title>
+
+  {{ if in .URL "/post/" }}
+  <meta property="og:site_name" content="{{ .Site.Title }}" />
+  <meta property="og:locale" content="{{ .Site.LanguageCode }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="{{ .Title }}" />
+  <meta property="og:description" content="{{ .Title }} | {{ .Site.Title }}" />
+  <meta property="og:url" content="{{ .URL }}" />
+  {{ end }}
+
   <link rel="stylesheet" href="//cdn.jsdelivr.net/uikit/2.27.2/css/uikit.min.css" />
   <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.10.0/styles/{{ .Site.Params.SyntaxHighlightTheme }}" />
   <link rel="stylesheet" href="/css/style.css" />

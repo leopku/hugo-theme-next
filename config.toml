@@ -1,17 +1,17 @@
 BaseUrl = ""
 LanguageCode = ""
 Title = ""
+DisqusShortname = ""
+GoogleAnalytics = ""
 
 [Params]
   Author = ""
   Birth = ""
   DateFormat = "Mon, Jan 2, 2006"
-  GoogleAnalyticsUserID = ""
   GravatarHash = ""
   Facebook = ""
   Twitter = ""
   Github = ""
-  Disqus = ""
   perPage = 10
   ShowRelatedPost = true
   ShowTagCloud = false
