@@ -72,7 +72,7 @@
 
 {{ partial "footer.html" . }}
 
-{{ if isset .Site.Params "Disqus" }}
+{{ if .Site.DisqusShortname }}
 <script type="text/javascript">
 
 (function() {
@@ -83,7 +83,7 @@
     dsq.type = 'text/javascript';
     dsq.async = true;
     ds_loaded = false;
-  var disqus_shortname = '{{ .Site.Params.Disqus }}';
+  var disqus_shortname = '{{ .Site.DisqusShortname }}';
     disqus_url = '{{ .Permalink }}';
   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 
